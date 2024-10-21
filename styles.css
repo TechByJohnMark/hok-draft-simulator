@@ -131,3 +131,15 @@ h2 {
     border: 3px solid white; /* Border */
     border-radius: 4px; /* Rounded corners */
 }
+
+.selected-slot {
+    border: 2px solid red; /* Border color for the selected slot */
+    background-color: rgba(255, 0, 0, 0.1); /* Light background for better visibility */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Subtle shadow for depth */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+}
+
+.selected-slot:hover {
+    background-color: rgba(255, 0, 0, 0.2); /* Darken background on hover */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7); /* More pronounced shadow on hover */
+}
