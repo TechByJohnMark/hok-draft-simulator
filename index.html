@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Draft Pick Simulator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>HOK Draft Pick Simulator</h1>
+        <div class="teams-container">
+            <div class="team" id="team1">
+                <center><h3>Blue Team</h3></center>
+                <h3>Bans:</h3>
+                <div class="bans">
+                    <div class="ban-slot" id="ban1-1"></div>
+                    <div class="ban-slot" id="ban1-2"></div>
+                    <div class="ban-slot" id="ban1-3"></div>
+                    <div class="ban-slot" id="ban1-4"></div>
+                </div>
+                <h3>Picks:</h3>
+                <div class="picks">
+                    <div class="pick-slot" id="pick1-1"></div>
+                    <div class="pick-slot" id="pick1-2"></div>
+                    <div class="pick-slot" id="pick1-3"></div>
+                    <div class="pick-slot" id="pick1-4"></div>
+                    <div class="pick-slot" id="pick1-5"></div>
+                </div>
+            </div>
+            <div class="hero-selection" id="hero-selection">
+                <h3>Select Hero</h3>    
+                <input type="text" id="searchBox" placeholder="Search Hero" onkeyup="filterHeroes()">
+                <div class="heroes" id="hero-list">
+                    <img src="images/agudo.jpg" alt="Hero 1" class="hero" draggable="true" id="agudo">
+                    <img src="images/alessio.jpeg" alt="Hero 2" class="hero" draggable="true" id="alessio">
+                    <img src="images/allain.jpg" alt="Hero 3" class="hero" draggable="true" id="allain">
+                    <img src="images/angela.png" alt="Hero 4" class="hero" draggable="true" id="angela">
+                    <img src="images/arli.jpg" alt="Hero 5" class="hero" draggable="true" id="arli">
+                    <img src="images/arthur.jpg" alt="Hero 6" class="hero" draggable="true" id="arthur">
+                    <img src="images/ata.jpg" alt="Hero 7" class="hero" draggable="true" id="ata">
+                    <img src="images/athena.jpg" alt="Hero 8" class="hero" draggable="true" id="athena">
+                    <img src="images/augran.jpg" alt="Hero 9" class="hero" draggable="true" id="augran">
+                    <img src="images/biron.jpeg" alt="Hero 10" class="hero" draggable="true" id="biron">
+                    <img src="images/butterfly.jpg" alt="Hero 11" class="hero" draggable="true" id="butterfly">
+                    <img src="images/cai yan.jpg" alt="Hero 12" class="hero" draggable="true" id="cai yan">
+                    <img src="images/charlotte.jpeg" alt="Hero 13" class="hero" draggable="true" id="charlotte">
+                    <img src="images/cirrus.jpg" alt="Hero 14" class="hero" draggable="true" id="cirrus">
+                    <img src="images/consort yu.jpg" alt="Hero 15" class="hero" draggable="true" id="consort yu">
+                    <img src="images/da qiao.jpg" alt="Hero 16" class="hero" draggable="true" id="da qiao">
+                    <img src="images/daji.jpg" alt="Hero 17" class="hero" draggable="true" id="daji">
+                    <img src="images/dharma.jpeg" alt="Hero 18" class="hero" draggable="true" id="dharma">
+                    <img src="images/di renjie.jpg" alt="Hero 19" class="hero" draggable="true" id="di renjie">
+                    <img src="images/dian wei.jpg" alt="Hero 20" class="hero" draggable="true" id="dian wei">
+                    <img src="images/diaochan.jpg" alt="Hero 21" class="hero" draggable="true" id="diaochan">
+                    <img src="images/dolia.jpg" alt="Hero 22" class="hero" draggable="true" id="dolia">
+                    <img src="images/donghuang.jpg" alt="Hero 23" class="hero" draggable="true" id="donghuang">
+                    <img src="images/dr bian.jpg" alt="Hero 24" class="hero" draggable="true" id="dr bian">
+                    <img src="images/dun.jpeg" alt="Hero 25" class="hero" draggable="true" id="dun">
+                    <img src="images/dyadia.jpg" alt="Hero 26" class="hero" draggable="true" id="dyadia">
+                    <img src="images/erin.jpg" alt="Hero 27" class="hero" draggable="true" id="erin">
+                    <img src="images/fang.jpg" alt="Hero 28" class="hero" draggable="true" id="fang">
+                    <img src="images/fuzi.jpg" alt="Hero 29" class="hero" draggable="true" id="fuzi">
+                    <img src="images/gan mo.jpg" alt="Hero 30" class="hero" draggable="true" id="gan mo">
+                    <img src="images/gao.jpg" alt="Hero 31" class="hero" draggable="true" id="gao">
+                    <img src="images/garo.jpg" alt="Hero 32" class="hero" draggable="true" id="garo">
+                    <img src="images/guan yu.jpg" alt="Hero 33" class="hero" draggable="true" id="guan yu">
+                    <img src="images/guiguzi.jpeg" alt="Hero 34" class="hero" draggable="true" id="guiguzi">
+                    <img src="images/han xin.jpg" alt="Hero 35" class="hero" draggable="true" id="han xin">
+                    <img src="images/heino.jpg" alt="Hero 36" class="hero" draggable="true" id="heino">
+                    <img src="images/huang zhong.jpg" alt="Hero 37" class="hero" draggable="true" id="huang zhong">
+                    <img src="images/huo yi.jpg" alt="Hero 38" class="hero" draggable="true" id="huo yi">
+                    <img src="images/jing.jpg" alt="Hero 39" class="hero" draggable="true" id="jing">
+                    <img src="images/kaizer.jpg" alt="Hero 40" class="hero" draggable="true" id="kaizer">
+                    <img src="images/kongming.jpg" alt="Hero 41" class="hero" draggable="true" id="kongming">
+                    <img src="images/kui.jpg" alt="Hero 42" class="hero" draggable="true" id="kui">
+                    <img src="images/lady sun.jpg" alt="Hero 43" class="hero" draggable="true" id="lady sun">
+                    <img src="images/lady zhen.jpeg" alt="Hero 44" class="hero" draggable="true" id="lady zhen">
+                    <img src="images/lam.jpg" alt="Hero 45" class="hero" draggable="true" id="lam">
+                    <img src="images/lanling.jpg" alt="Hero 46" class="hero" draggable="true" id="lanling">
+                    <img src="images/li bai.jpg" alt="Hero 47" class="hero" draggable="true" id="li bai">
+                    <img src="images/li xin.jpg" alt="Hero 48" class="hero" draggable="true" id="li xin">
+                    <img src="images/lian po.png" alt="Hero 49" class="hero" draggable="true" id="lian po">
+                    <img src="images/liang.jpeg" alt="Hero 50" class="hero" draggable="true" id="liang">
+                    <img src="images/liu bang.jpg" alt="Hero 51" class="hero" draggable="true" id="liu bang">
+                    <img src="images/liu bei.jpg" alt="Hero 52" class="hero" draggable="true" id="liu bei">
+                    <img src="images/liu shan.jpg" alt="Hero 53" class="hero" draggable="true" id="liu shan">
+                    <img src="images/loong.jpg" alt="Hero 54" class="hero" draggable="true" id="loong">
+                    <img src="images/lu bu.jpg" alt="Hero 55" class="hero" draggable="true" id="lu bu">
+                    <img src="images/luara.jpg" alt="Hero 56" class="hero" draggable="true" id="luara">
+                    <img src="images/luban.jpg" alt="Hero 57" class="hero" draggable="true" id="luban">
+                    <img src="images/luna.jpg" alt="Hero 58" class="hero" draggable="true" id="luna">
+                    <img src="images/mai shiranui.jpeg" alt="Hero 59" class="hero" draggable="true" id="mai shiranui">
+                    <img src="images/marco polo.jpg" alt="Hero 60" class="hero" draggable="true" id="marco polo">
+                    <img src="images/mayene.jpg" alt="Hero 61" class="hero" draggable="true" id="mayene">
+                    <img src="images/meng ya.jpg" alt="Hero 62" class="hero" draggable="true" id="meng ya">
+                    <img src="images/menki.jpg" alt="Hero 63" class="hero" draggable="true" id="menki">
+                    <img src="images/milady.jpg" alt="Hero 64" class="hero" draggable="true" id="milady">
+                    <img src="images/ming.jpeg" alt="Hero 65" class="hero" draggable="true" id="ming">
+                    <img src="images/mozi.jpg" alt="Hero 66" class="hero" draggable="true" id="mozi">
+                    <img src="images/mulan.jpg" alt="Hero 67" class="hero" draggable="true" id="mulan">
+                    <img src="images/musashi.jpg" alt="Hero 68" class="hero" draggable="true" id="musashi">
+                    <img src="images/nakoruru.jpg" alt="Hero 69" class="hero" draggable="true" id="nakoruru">
+                    <img src="images/nezha.jpeg" alt="Hero 70" class="hero" draggable="true" id="nezha">
+                    <img src="images/nuwa.jpg" alt="Hero 71" class="hero" draggable="true" id="nuwa">
+                    <img src="images/pei.jpg" alt="Hero 72" class="hero" draggable="true" id="pei">
+                    <img src="images/princess frost.jpg" alt="Hero 73" class="hero" draggable="true" id="princess frost">
+                    <img src="images/shangguan.jpg" alt="Hero 74" class="hero" draggable="true" id="shangguan">
+                    <img src="images/shouyue.jpg" alt="Hero 75" class="hero" draggable="true" id="shouyue">
+                    <img src="images/sima yi.jpeg" alt="Hero 76" class="hero" draggable="true" id="sima yi">
+                    <img src="images/sun bin.jpg" alt="Hero 77" class="hero" draggable="true" id="sun bin">
+                    <img src="images/sunce.jpg" alt="Hero 78" class="hero" draggable="true" id="sun ce">
+                    <img src="images/ukyo.jpg" alt="Hero 79" class="hero" draggable="true" id="ukyo">
+                    <img src="images/wukong.jpg" alt="Hero 80" class="hero" draggable="true" id="wukong">
+                    <img src="images/wuyan.jpg" alt="Hero 81" class="hero" draggable="true" id="wuyan">
+                    <img src="images/xiang yu.jpg" alt="Hero 82" class="hero" draggable="true" id="xiang yu">
+                    <img src="images/xiao qiao.png" alt="Hero 83" class="hero" draggable="true" id="xiao qiao">
+                    <img src="images/yang jian.jpg" alt="Hero 84" class="hero" draggable="true" id="yang jian">
+                    <img src="images/yao.jpeg" alt="Hero 85" class="hero" draggable="true" id="yao">
+                    <img src="images/yaria.jpg" alt="Hero 86" class="hero" draggable="true" id="yaria">
+                    <img src="images/ying.jpg" alt="Hero 87" class="hero" draggable="true" id="ying">
+                    <img src="images/yuhuan.jpg" alt="Hero 88" class="hero" draggable="true" id="yuhuan">
+                    <img src="images/zhang fei.jpg" alt="Hero 89" class="hero" draggable="true" id="zhang fei">
+                    <img src="images/zhou yu.jpg" alt="Hero 90" class="hero" draggable="true" id="zhou yu">
+                    <img src="images/zhuangzi.jpg" alt="Hero 91" class="hero" draggable="true" id="zhuangzi">
+                    <img src="images/zilong.jpg" alt="Hero 92" class="hero" draggable="true" id="zilong">
+                    <img src="images/ziya.jpg" alt="Hero 93" class="hero" draggable="true" id="ziya">
+                </div>                
+            </div>
+            <div class="team" id="team2">
+                <center><h3>Red Team</h3></center>
+                <h3>Bans:</h3>
+                <div class="bans">
+                    <div class="ban-slot" id="ban2-1"></div>
+                    <div class="ban-slot" id="ban2-2"></div>
+                    <div class="ban-slot" id="ban2-3"></div>
+                    <div class="ban-slot" id="ban2-4"></div>
+                </div>
+                <h3>Picks:</h3>
+                <div class="picks">
+                    <div class="pick-slot" id="pick2-1"></div>
+                    <div class="pick-slot" id="pick2-2"></div>
+                    <div class="pick-slot" id="pick2-3"></div>
+                    <div class="pick-slot" id="pick2-4"></div>
+                    <div class="pick-slot" id="pick2-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

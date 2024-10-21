@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: #002D62;
+}
+
+.container {
+    max-width: 1200px; /* Increased for better spacing */
+    margin: auto;
+}
+
+.teams-container {
+    display: flex; /* Flexbox for the three main sections */
+    justify-content: space-between; /* Distribute space evenly */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.team {
+    border: 3px solid white;
+    color: white;
+    padding: 10px;
+    background:#002D62;
+    width: 30%; /* Adjust width for three columns */
+}
+
+.ban-slot, .pick-slot {
+    border: 2px dashed #aaa;
+    height: 75px;
+    width: 75px;
+    margin: 5px 3px; /* Adjusted for spacing */
+}
+
+.bans {
+    display: flex;
+    flex-direction: row; /* Make bans horizontal */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.ban-slot {
+    width: calc(25% - 5px); /* Adjust width for four bans */
+}
+
+.picks {
+    display: flex;
+    flex-direction: row; /* Stack picks vertically */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-selection {
+    border: 3px solid white; /* Optional border for the hero selection */
+    background: #002D62; /* Background for better visibility */
+    color: white;
+    padding: 10px;
+    width: 30%; /* Adjust width for hero selection */
+    text-align: center; /* Center text */
+}
+
+.heroes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the heroes in the selection box */
+}
+
+.hero {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    cursor: grab;
+    border: 2px solid gold;
+    border-radius: 5px;
+}
+
+#hero-list {
+    max-height: 43vh;           /* Set a fixed height for the hero list */
+    overflow-y: scroll;        /* Enable vertical scrolling */
+    border: 1px solid #ccc;  /* Optional: add a border for visibility */
+    padding: 5px;            /* Optional: add some padding */
+}
+
+.hero:active {
+    cursor: grabbing;
+}
+
+.drag-over {
+    border-color: red; /* Change border color when dragging over */
+}
+
+h1 {
+    color: gold;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Slot Content Container */
+.slot-content {
+    position: relative; /* Enable positioning for child elements */
+    display: inline-block; /* Keep the hero and button together */
+}
+
+/* Remove Hero Button Styles */
+.remove-hero {
+    position: absolute; /* Position relative to the slot-content */
+    top: 5px; /* Adjust to desired top offset */
+    right: 5px; /* Adjust to desired right offset */
+    background-color: red; /* Background color for visibility */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Round button */
+    width: 15px; /* Width of the button */
+    height: 15px; /* Height of the button */
+    text-align: center; /* Center text */
+    line-height: 15px; /* Center text vertically */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 10px; /* Font size for the X */
+}
+
+/* Optional: Button Hover Effect */
+.remove-hero:hover {
+    background-color: darkred; /* Darken on hover */
+}
+
+#searchBox {
+    width: 90%; /* Full width */
+    padding: 10px; /* Padding */
+    margin-bottom: 10px; /* Space below */
+    border: 3px solid white; /* Border */
+    border-radius: 4px; /* Rounded corners */
+}
